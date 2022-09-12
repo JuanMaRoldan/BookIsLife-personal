@@ -1,0 +1,108 @@
+.switch{
+    background-color: #000;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+.switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #f1f1f1;
+    top:0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: var(--transition);
+    box-shadow: 0px 0px 2px 2px(0,0,0,.2);
+}
+.switch.active{
+    background: orange ;
+    color: black;
+}
+.switch.active::after{
+    right: 0;
+    left: unset; /* quitamos el valor anterior */
+}
+.switch .option-dark {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: var(--light);
+}
+/* Header */
+body.dark .home_nav-menu li{
+    background: #000;
+}
+body.dark .home_nav-menu li a{
+   color: var(--light);
+}
+
+/* Home */
+body.dark{
+    background: var(--dark);
+    transition: var(--transition);
+}
+
+body.dark main.home h2{
+    color:#f1f1f1
+}
+
+/* producto detail */
+body.dark .heading span{
+    color:var(--light);
+}
+body.dark .descripcion-detail .descripcion p{
+    color:var(--light) ;
+}
+body.dark .product-detail .product-slider .content h3{
+    color: var(--light);
+}
+body.dark .tabla-detalles .tabla-detalle-nombre {
+    color: var(--light);
+}
+body.dark .tabla-detalle-informacion{
+    color: var(--light);
+}
+/* frecuentrly questions */
+body.dark .questions-title{
+    color:var(--light)
+}
+body.dark .questions-categories .category.activa{
+    color:var(--light)
+}
+body.dark .carousel__indicadores .glider-dot{
+    background: var(--light);
+}
+body.dark .question-box.activa{
+    box-shadow: 0 -2px 10px rgb(245, 242, 242);
+}
+body.dark .product-stand{
+    z-index: 1000;
+}
+/*product create*/
+body.dark .titulo_admi{
+    color:var(--light);
+}
+body.dark .titulo_dos_admi{
+    color: var(--light);
+}
+/* vista administrador*/
+body.dark .table-content{
+    color: var(--light);
+    
+}
+body.dark .table_price_book{
+    color: var(--light);
+    background-color: rgba(255,255,255,0.2);
+}
+body.dark .table-link{
+    color: var(--light);
+ }

@@ -1,0 +1,276 @@
+/*HEADER*/
+
+.home__header {
+    background-image: url('/images/fondos/fondo-b.jpg');
+    background-size: cover;
+    text-decoration: none;
+    list-style: none;   
+}
+/*Header nav*/
+.header_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 0.5vh 2vh;
+    align-items: end;
+}
+.header_nav li {
+    margin: 15px 5px 0px 15px;
+    list-style: none;
+}
+.header_nav li a i {
+    font-size: 28px;
+    color: rgb(242, 225, 197);
+}
+.header_nav li a i:hover{
+    color: #000000;
+    text-shadow: 0 0 5px #ffee10;
+}
+.header_nav li.idioma a {
+    border: solid 1px white;
+    border-radius: 3px;
+    font-size: 10px;
+    color: #FBF8F1;
+}
+.header_nav li.idioma a i {
+    font-size: 10px;
+}
+/*Logos*/
+.header__logo_home {
+    background-image: url(/images/logos/logo-proyect.png);
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 61%;
+    border-radius: 50%;
+    height: 14vh;
+    width: 14vh;
+    margin:0px 5px 10px 15px;
+}
+.header__logo2_home {
+    background-image: url(/images/logos/logo-proyect2.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px;
+    height: 4vh;
+    width: 18vh;
+    align-self: flex-end;
+    margin-bottom: 15px;
+}
+/*      HEADER BUSCADOR */
+header.home__header div.header_buscador {
+    margin-top: 0px;
+    width: 100%;
+    height: 55px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/*   MENU DESPLEGABLE */
+.home_header_nav_categorias{
+    height: 55px;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1; 
+}
+.bar-btn{
+    font-size: 25px;
+    color: rgb(3, 3, 3);
+    margin-left: 35px;
+    cursor: pointer;
+    padding-left: 3vh;
+}
+.home_nav-menu{
+    position: absolute;
+    width: 80%;
+    height: 0vh;
+    top: 6vh;
+    text-align: left;
+    transition: all .5s;
+}
+.home_nav-menu li {
+    display: none;
+    line-height: 30px;
+    padding:5px 0px 5px 20px;
+    transition: all .5s;
+    width:15rem;
+    border-bottom: solid 1px grey;
+    background-color: #fff;
+}
+.home_nav-menu li:last-child {
+    border-bottom: none;
+}
+.home_nav-menu li a{
+    color: black;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "Cinzel";
+}
+.home_nav-menu li:hover{
+    transition: .3s;
+    background-color: #F1F1F1;
+}
+#check {
+    display :none
+}
+#check:checked ~ .home_nav-menu li {
+    display: block;
+}
+/* CONTAINER DE MENU HABURGESA Y BUSCADOR */
+.caja-input-buscador{
+    display: inline-table;
+}
+.header_buscador_y_menuhamburguesa{
+    display: flex;
+    flex-direction: row-reverse;   
+}
+/*  BUSCADOR INPUT */
+header.home__header div.header_buscador input {
+    width: fit-content;
+    height: 26px;
+    font-family: "cinzel";
+    border-radius: 5px;
+    border: solid 1px #cfcecc;
+    background-color: #FBF8F1;
+    padding: 5px;
+    align-self: center;
+    font-size: 15px;
+}
+header.home__header div.header_buscador button.lupa {
+  /*   height: 25px; */
+    border-radius: 5px;
+    border: solid 1px #cfcecc;
+    background-color: #FBF8F1;
+    padding: 5px;
+    align-self: center;
+    color: rgb(97, 91, 91);
+    margin-top: 14px;
+}
+/* TABLET */
+@media (min-width:768px){
+    .header_nav {       
+        padding: 0vh 5vh;
+    }
+    .header_nav li a i {
+        font-size: 27px;
+        color: rgb(242, 225, 197);
+    }
+    .header_nav li.idioma a {
+        font-size: 15px;
+    }
+    .header_nav li.idioma a i {
+        font-size: 15px;
+    }
+    /*   logos   */
+    .header__logo_home {
+        height: 15vh;
+        width: 15vh;
+        margin:0px 5px 10px 45px;
+    }
+    .header__logo2_home {  
+        height: 4vh;
+        width: 25vh;
+        margin-bottom: 10px;
+    }
+    /*   Buscador   */
+    header.home__header div.header_buscador {
+        justify-content: flex-start;
+        
+    }
+    /*      INPUT   */
+    header.home__header div.header_buscador input {
+        width: 46vh;
+        height: 28px;
+        font-size: 16px;
+        margin-top: 12px;
+    }
+    header.home__header div.header_buscador button.lupa {
+        width: 5vh;
+        height: 28px;
+        font-size: 16px;
+        margin-top:12px;
+    }
+    /* menu deplegable */
+    .home_nav-menu {
+        width: 50%;
+        top: 5.8vh;
+    }
+    /* icono hamburguesa */
+    .iconoHamburguesa{
+        font-size: 30px;
+    }
+    .bar-btn{
+        font-size: 30px;
+        padding-left: 7vh;
+    }
+    /*Banner*/
+    .home__header div.header_banner {
+        display: none;
+    }
+    .home__header div.header_banner-desktop {
+        display: flex;
+    }
+    .home__header div.header_banner img {
+        width: 100%;
+        height: 350px;
+    }
+    .caja-input-buscador {
+        display: flex;
+    }
+}
+/* DESKTOP*/
+@media(min-width:1024px) {
+    .header_nav {
+        padding: 0vh 10vh;
+    }
+    .header_nav li a i {
+        font-size: 35px;
+    }
+    /*      LOGOS     */
+    .header__logo_home {
+        height: 15Vh;
+        width:15vh;
+        margin-left: 10vh;
+    }
+    .header__logo2_home {  
+        height: 4vh;
+        width: 25vh;
+        margin-bottom: 15px;
+    }
+     /*   Buscador   */
+     header.home__header div.header_buscador {
+      
+        padding-left: 5rem;
+    }
+      /*      INPUT   */
+      header.home__header div.header_buscador input {
+        font-size: 16px;
+    }
+ /* MENU DESPLEGABLE */
+    .home_header_nav_categorias{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        position: relative;
+        padding-left: 11vh;
+    }
+    .home_nav-menu li {
+        width:20rem;
+    }
+    .home_nav-menu li a {
+        font-size: 12px;
+    }
+    .home_nav-menu {
+        top: 5.8vh;
+    }
+    /* icono hamburguesa */
+    .bar-btn{   
+        padding-left: 0vh;
+    }
+}

@@ -1,0 +1,40 @@
+[
+   {
+      "id": 1,
+      "name": "Gerardo",
+      "surname": "rodriguez",
+      "email": "gaston@gmail.com",
+      "password": "$2a$10$wpRSYU7ZTT8yJfhaSGys5.xm7wJCS3uarL1tyc4e74FKxLNrvy/x.",
+      "rol": "admin",
+      "avatar": "userDefault.png",
+      "date": "",
+      "tel": ""
+   },
+   {
+      "id": 2,
+      "name": "juan",
+      "surname": "Roldan",
+      "email": "juan@gmail.com",
+      "password": "$2a$10$LSkusqr79S2acxR.28dGAeb3WYLFN8VB/EW/GVX6rsiengEPNLT3W",
+      "rol": "admin",
+      "avatar": "userDefault.png"
+   },
+   {
+      "id": 3,
+      "name": "Adriel",
+      "surname": "Coria",
+      "email": "adrielcoria1914@gmail.com",
+      "password": "$2a$10$tnW6rLFzau8XrberHbrMOOPagubnmd8TFHl2XHX4duBJfS99z/GIm",
+      "rol": "admin",
+      "avatar": "userDefault.png"
+   },
+   {
+      "id": 4,
+      "name": "Luisa",
+      "surname": "morales",
+      "email": "luisa@gmail.com",
+      "password": "$2a$10$MjqXRBCF8lSl1X8x6Mz8LOq6aA4YOLjpy6SYm.p.JiULsvWKW/zCa",
+      "rol": "user",
+      "avatar": "userDefault.png"
+   }
+]

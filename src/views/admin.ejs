@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head' ,{ title : 'Administrador'}) %> 
+
+<body class="home">
+    <%- include('./partials/header') %> 
+
+<!--  CUERPO  -->
+    <main class="home">
+<!-- SECCION LOS MAS VENDIDOS DE LA SEMANA-->
+        <h2>Stock disponible</h2>
+
+<!--    Tabla -->
+        <section class="home__box_products">            
+                <table class="table-admin">
+                    <thead>
+                    <tr class="table-admin-tr">
+                        <th class="table-column" scope="col">#</th>
+                        <th class="table-column" scope="col">Titulo</th>
+                        <th class="table-column" scope="col">Autor</th>
+                        <th class="table-column" scope="col">Precio</th>
+                        <th class="table-column" scope="col">Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody class="table-admin-tbody">
+                        <% products.forEach(({id,name,autor,price},index) => { %>
+                            <tr class="table-admin-tr">
+                                <th class="table-column" scope="row"><%= index + 1 %> </th>
+                                <td class="table-content"><%= name.toUpperCase() %> </td>
+                                <td class="table-content"><%= autor.name.toUpperCase() %></td>
+                                <td class="table_price_book">$<%= toThousand(price) %></td>
+                                <td class="table-content actions">
+                                    <!-- Detalle del producto -->
+                                    <a class="table-link" href="/products/detail/<%= id %>" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></a>
+                            <!--    Editar producto -->
+                                <a class="table-link" href="/products/edit/<%= id %>" class="btn btn-sm btn-success m-1"><i class="fas fa-edit"></i></a>
+                            <!--  Eliminar producto -->
+                                <form action="/products/delete/<%= id %>?_method=DELETE" method="POST">
+                                    <button   type="submit" class="table-link-button"><i class="fas fa-trash-alt"></i></button>
+                                </form>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        
+        </section>
+    <!--  scroll up -->
+            <div class="home__main__up">
+                <a href="/"><i class="fa-solid fa-circle-chevron-up"></i></a>
+            </div>
+    </main>
+
+    <%- include('./partials/footer') %> 
+    <script src="/javascript/darkmode.js"></script>
+</body>
+
+</html>

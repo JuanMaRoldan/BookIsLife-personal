@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%- include('./partials/head', { title : product.name}) %> 
+
+<body class="product-detail">
+    <%- include('./partials/header') %> 
+
+    
+    
+   
+
+   <main class="product-detail__main">
+    <!-- GO BACK BUTTON -->
+    <div class="container-button-product-detail">
+        <a class="a_button" href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
+    </div>
+
+    <section class="product-detail" id="product-detail">
+      <!-- TITLE  -->
+      <h1 class="heading"><span>Home || <%=product.name %></span></h1>
+
+      <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+          <!-- STARS SECTION -->
+          
+            <!--  IMAGE SECTION -->
+            <div class="image">
+              <div class="swiper-slide box">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              <a href=""><img src="/images/portadas/<%= product.image %>" alt="" /></a>
+              <img src="/images/otrasImagenes/stand.png" class="product-stand" alt="">
+            </div>
+            
+            <div class="content">
+              <h3><%= product.name %></h3>
+              <!-- PRICE SECTION -->
+              <div class="price"> $<%= toThousand(product.price) %> <span>$20.99</span></div>
+              <a href="/products/cart" class="btn shop">comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  DETAIL'S TABLE-->
+      <table class="tabla-detalles">
+        <tbody class="table-group-divider">
+          <tr class="caja-tabla-detalle">
+            <th class="tabla-detalle-nombre" scope="row">Título</th>
+            <td class="tabla-detalle-informacion"><%= product.name %></td>
+          </tr>
+          <tr class="caja-tabla-detalle">
+            <th class="tabla-detalle-nombre " scope="row">Autor</th>
+            <td class="tabla-detalle-informacion"><%= product.autor.name %></td>
+          </tr>
+
+          <tr class="caja-tabla-detalle">
+            <th class="tabla-detalle-nombre" scope="row">Género</th>
+            <td class="tabla-detalle-informacion"><%= product.genre.name %></td>
+          </tr>
+
+          <tr class="caja-tabla-detalle">
+            <th class="tabla-detalle-nombre" scope="row">Editorial</th>
+            <td class="tabla-detalle-informacion"><%= product.publisher.name %></td>
+          </tr>
+          <tr class="caja-tabla-detalle">
+            <th class="tabla-detalle-nombre" scope="row">Idioma</th>
+            <td class="tabla-detalle-informacion"><%= product.language.name %></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!--  SINOPSIS SECTION -->
+      <div class="descripcion-detail">
+        <h3>sinopsis</h3>
+        <article class="descripcion">
+          <p>
+          <%= product.description %>  
+          </p>
+        </article>
+      </div>
+    </section>
+        <!-- BOTON SCROLL UP -->
+        <div class="home__main__up">
+            <a href="#"><i class="fa-solid fa-circle-chevron-up"></i></a>
+        </div>
+  </main>
+    <%- include('./partials/footer') %> 
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script src="/javascript/darkmode.js"></script>
+    
+</body>
+
+</html>

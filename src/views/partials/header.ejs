@@ -1,0 +1,77 @@
+<header class="home__header">
+    <nav class="header_nav">
+        <!--    NAV BAR HEADER  -->
+        <% if (!locals.userLogin) { %>
+           <!--  //navBar - Login -->
+            <li><a href="/users/login"><i class="fa-solid fa-user"></i></a></li>
+            <!-- //navBar - registro -->
+            <li><a href="/users/register"><i class="fa-solid fa-envelope"></i></a></li>
+            
+        <% }else{  %>
+            <li><a href="/users/profile"  style="color: white  ; font-weight: 900; text-transform: uppercase;"><%= userLogin.name %></a> </li>
+            <li ><a style="color: white  ; font-weight: 900;" href="/users/logout">SALIR</a></li>
+        <% } %>
+        
+        <% if (locals.userLogin?.rolId !== 1) { %>
+          <!--  //navBar - carrito -->
+        <li><a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <% } %>
+    
+    
+    
+          <!--  //navBar - caso usuario sea administrador-->
+        <% if (locals.userLogin?.rolId === 1) { %>
+             <!--  //navBar - añadir libro - vista administrador,lista, acciones -->
+            <li><a href="/products/create"><i class="fa-solid fa-screwdriver-wrench"></i></a></li>
+            <li><a href="/admin"><i class="fa-solid fa-book"></i></a></li>
+        <% } %>
+    
+    
+        
+      <!--   <li class="idioma"><a href=""><i class="fa-solid fa-globe"></i> English</a></li> -->
+      
+        <!-- BOTON DE DARK MODE -->
+        <button class="switch" id="switch">
+            <span class="option-dark"><i class="fa-solid fa-sun"></i></span>
+            <span class="option-dark"><i class="fa-solid fa-moon"></i></span>
+        </button>
+
+
+    </nav>
+    <!--   LOGOS HEADER -->
+    <div class="container_home_header_logo">
+        <a class="deRegreso" href="/">
+        <div class="header__logo_home"></div></a>
+        <br>
+        <div class="header__logo2_home"></div>
+    </div>
+
+    <!--   BUSCADOR -->
+    <div class="header_buscador_y_menuhamburguesa">
+    <div class="header_buscador">
+        <form action="/search" method="GET">
+         <div class="caja-input-buscador">
+            <input type="text" name="keywords" placeholder="Encuentra tu libro ideal" />
+            <button type="submit" class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        </form>
+        
+    </div>
+
+    <!--      MENU HAMBURGUESA -->
+    <nav class="home_header_nav_categorias">
+
+        <input type="checkbox" id="check">
+        <label for="check" class="bar-btn">
+            <i class="fa-solid fa-bars iconoHamburguesa"></i>
+        </label>
+        <ul class="home_nav-menu">
+            <% genres.forEach(genre => { %>
+                <li><a href="/products/filter?genre=<%= genre.id %>"><%= genre.name %></a></li>
+            <% }) %>
+        </ul>
+    </nav>
+</div>
+
+</header>
