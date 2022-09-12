@@ -1,4 +1,7 @@
-## Integrantes:
+# Este proyecto esta basado en un proyecto Grupal pero aparte, con la intension de modificarlo a mi perspectiva.
+
+
+## Proyecto grupal : Integrantes:
 ***
 
 **Adriel Coria:**
